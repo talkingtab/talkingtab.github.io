@@ -5,11 +5,40 @@
 <meta name="viewport" content="width=device-width">
 <title>talkingtab</title>
 <style>
+.left {
+      flex: 1 4;
+}
+
+.center {
+      flex: 3 1;
+        flex-basis: 50%;
+}
+
+.right {
+      flex: 1 1;
+}
+.mainbody {
+    font: 11px/1.8 Verdana,Bitstream Vera Sans,sans-serif;
+    color: #111;
+    word-wrap: break-word;
+    position: relative;
+    margin: 7em auto;
+    max-width: 1000px;
+}
+
+
+.maincontainer {
+    display: flex;
+    max-width: 800px;
+}
+
 body {
-    width: 35em;
-    margin: 0 auto;
+    padding: 2em 0 0 0;
+    width: auto;
+    color: #111;
     font-family: Tahoma, Verdana, Arial, sans-serif;
 }
+
 #rvb.red {
     color: red;
 }
@@ -21,9 +50,14 @@ body {
 <script src="index.js"></script>
 </head>
 <body>
-<div id="rvb" class="blue">Hello RVB</div>
-<button onclick="clearall()" id="item7">Click here</button>
-
+    <div class="maincontainer">
+        <div class="left"></div>
+        <div class="center">
+            <div id="rvb" class="blue">Hello RVB</div>
+            <button onclick="clearall()" id="item7">Click here</button>
+        </div>
+        <div class="right"></div>
+    </div>
 </body>
 </html>
 
